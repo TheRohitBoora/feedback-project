@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voicebox — Live inbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="logo" aria-label="Voicebox home">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M12 3C6.48 3 2 6.58 2 11c0 2.27 1.13 4.3 2.94 5.65L4 21l4.47-1.18C9.97 20.27 10.97 20.5 12 20.5c5.52 0 10-3.58 10-8s-4.48-8-10-8zm0 14.5c-.89 0-1.73-.14-2.53-.4l-.18-.06-2.17.58.58-2.11-.12-.18A5.97 5.97 0 014 11c0-3.31 3.13-6 8-6s8 2.69 8 6-3.13 6-8 6z"
+          />
+        </svg>
+        Voicebox
+      </a>
+      <nav class="nav-actions" aria-label="Main">
+        <a href="/" class="nav-btn ghost">Submit</a>
+        <a href="/responses" class="nav-btn active">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"
+            />
+          </svg>
+          Live inbox
+        </a>
+      </nav>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="dashboard-summary" aria-labelledby="dashboard-heading">
+        <div class="dashboard-summary-copy">
+          <p class="dashboard-eyebrow">Inbox</p>
+          <h1 id="dashboard-heading">What people sent in</h1>
+          <p class="sub">New messages appear first. The number on each row is its place in the list—01 is the newest.</p>
+        </div>
+      </section>
+
+      <section class="feed-section" aria-labelledby="feed-heading">
+        <div class="feed-section-head">
+          <h2 id="feed-heading" class="feed-heading">Messages</h2>
+        </div>
+        <div id="submissions-root">
+          <p class="loading">Loading…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">Voicebox — a simple line from you to us.</footer>
+
+    <script src="/js/responses.js" type="module"></script>
+  </body>
+</html>

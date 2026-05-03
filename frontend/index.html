@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voicebox — Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="logo" aria-label="Voicebox home">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M12 3C6.48 3 2 6.58 2 11c0 2.27 1.13 4.3 2.94 5.65L4 21l4.47-1.18C9.97 20.27 10.97 20.5 12 20.5c5.52 0 10-3.58 10-8s-4.48-8-10-8zm0 14.5c-.89 0-1.73-.14-2.53-.4l-.18-.06-2.17.58.58-2.11-.12-.18A5.97 5.97 0 014 11c0-3.31 3.13-6 8-6s8 2.69 8 6-3.13 6-8 6z"
+          />
+        </svg>
+        Voicebox
+      </a>
+      <nav class="nav-actions" aria-label="Main">
+        <a href="/" class="nav-btn active">Submit</a>
+        <a href="/responses" class="nav-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"
+            />
+          </svg>
+          Live inbox
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <span class="hero-badge">Quick & private</span>
+        <h1>Your feedback matters</h1>
+        <p>Drop a note with your name and email—bugs, ideas, or a quick hello. We review everything that lands here.</p>
+      </div>
+
+      <div class="card">
+        <form id="feedback-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" maxlength="120" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="jane@example.com"
+                maxlength="254"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="What's on your mind?"
+              maxlength="4000"
+              required
+            ></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit" id="submit-btn">
+              Send feedback
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div id="form-message" class="alert" hidden role="status" aria-live="polite"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">Voicebox — a simple line from you to us.</footer>
+
+    <script src="/js/form.js" type="module"></script>
+  </body>
+</html>
