@@ -1,5 +1,7 @@
 # Voicebox — Feedback Form (Intern Assignment)
 
+**Author:** [TheRohitBoora](https://github.com/TheRohitBoora) (Rohit Boora)
+
 A small full-stack **feedback system**: **HTML, CSS, JavaScript** frontend and **Python (Flask)** backend. The UI uses an indigo / violet theme with **Voicebox** branding: a submit form and a **Live inbox** page that lists messages in a numbered feed.
 
 This README answers the assignment: **break your own system**, **top fixes**, **explain your approach**, and **scale thinking**, plus how to run the project and host it on GitHub.
@@ -120,11 +122,31 @@ Feedback Project/
 
 ## Push to GitHub
 
+This project is set up for account **[TheRohitBoora](https://github.com/TheRohitBoora)**. After you create the empty repo on GitHub, use the URL below (change the repo name if you used something other than `feedback-project`).
+
 ### 1. Create a new repository on GitHub
 
-In the browser: **GitHub → New repository** (e.g. `feedback-project`). Do **not** add a README if you already have one locally.
+In the browser: [github.com/new](https://github.com/new) — name it e.g. **`feedback-project`**. Leave **Add a README** unchecked (you already have one here).
 
 ### 2. From this folder on your machine
+
+If you **already** ran `git init` and committed, only add the remote and push:
+
+```powershell
+cd "c:\Users\Rohit Boora\Desktop\Feedback Project"
+git branch -M main
+git remote add origin https://github.com/TheRohitBoora/feedback-project.git
+git push -u origin main
+```
+
+If `origin` already exists, update it instead:
+
+```powershell
+git remote set-url origin https://github.com/TheRohitBoora/feedback-project.git
+git push -u origin main
+```
+
+**First time** (no git repo yet):
 
 ```powershell
 cd "c:\Users\Rohit Boora\Desktop\Feedback Project"
@@ -132,13 +154,11 @@ git init
 git add .
 git commit -m "Initial commit: Voicebox feedback form and Flask API"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git remote add origin https://github.com/TheRohitBoora/feedback-project.git
 git push -u origin main
 ```
 
-Replace `YOUR_USERNAME` and `YOUR_REPO` with your GitHub username and repository name.
-
-If GitHub asks you to sign in, use a **Personal Access Token** as the password (or GitHub CLI / SSH as you prefer).
+Use a **Personal Access Token** as the password when Git prompts over HTTPS, or configure **SSH** if you prefer.
 
 ### 3. Optional: GitHub CLI
 
@@ -146,11 +166,7 @@ If `gh` is installed and you are logged in (`gh auth login`):
 
 ```powershell
 cd "c:\Users\Rohit Boora\Desktop\Feedback Project"
-git init
-git add .
-git commit -m "Initial commit: Voicebox feedback form and Flask API"
-git branch -M main
-gh repo create YOUR_REPO --public --source=. --remote=origin --push
+gh repo create feedback-project --public --source=. --remote=origin --push
 ```
 
 ---
